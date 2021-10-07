@@ -1,0 +1,115 @@
+.ReactModal__Body--open {
+  overflow: hidden !important;
+}
+
+.ReactModal__Overlay {
+  background-color: rgba(55, 55, 55, 0.75) !important;
+  bottom: 0;
+  left: 0;
+  overflow-y: scroll;
+  padding-top: 70px;
+  padding-bottom: 112px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 9999;
+
+  .ReactModal__Content {
+    background-color: #fff;
+    border-radius: 4px;
+    border: none;
+    display: block;
+    height: auto;
+    left: 50%;
+    padding: 4rem;
+    position: relative;
+    transform: translate(-50%);
+    transition: opacity 0.3s ease-in-out;
+  }
+}
+
+.modal {
+  max-width: 90rem;
+  width: 90vw;
+
+  &--large {
+    max-width: 144rem;
+    width: 90vw;
+  }
+
+  &--small {
+    padding: 59px 50px 50px;
+    max-width: 50rem;
+    width: 90vw;
+  }
+
+  &--center {
+    position: absolute !important;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
+  }
+}
+
+.modal__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  min-height: 552px;
+  padding: 20px;
+  background-color: white;
+
+  .modal__img img {
+    max-width: 300px;
+  }
+
+  .modal__content {
+    padding: 20px;
+    margin-left: 20px;
+    height: 100%;
+
+    .modal__title {
+      h2 {
+        @include font-size(24px);
+        text-transform: initial;
+      }
+    }
+
+    .modal__author {
+      margin-top: 15px;
+    }
+
+    .modal__description {
+      min-height: 352px;
+      margin-top: 30px;
+      text-align: justify;
+
+      &::after {
+        content: "";
+        display: inline-block;
+        width: 100%;
+      }
+
+      p {
+        text-indent: 30px;
+      }
+    }
+  }
+}
+
+.modal__close {
+  position: absolute;
+  right: -20px;
+  top: -35px;
+  cursor: pointer;
+  font-size: 35px;
+  color: #fff;
+  font-weight: 300;
+
+  svg {
+    max-width: 16px;
+    max-height: 16px;
+    fill: white;
+  }
+}
