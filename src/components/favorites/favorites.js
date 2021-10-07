@@ -8,7 +8,7 @@ const Favorites = props => {
   return (
     <div>
       <button onClick={() => props.history.goBack()} className='back-btn'>
-        go back
+        BACK
       </button>
       <div>favorites</div>
     </div>

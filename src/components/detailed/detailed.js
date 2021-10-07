@@ -19,7 +19,7 @@ const Detailed = props => {
       {book ? (
         <div className='detailed'>
           <div className='detailed__title'>{book?.volumeInfo?.title}</div>
-          <img src={book?.volumeInfo?.imageLinks?.small} alt='' />
+          <img src={book?.volumeInfo?.imageLinks?.thumbnail} alt='' />
           <div className='detailed__subtitle'>{book?.volumeInfo?.subtitle}</div>
           <div className='detailed__desc'>{book?.volumeInfo?.description}</div>
         </div>
