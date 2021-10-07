@@ -9,8 +9,6 @@ import Header from '../header/Header';
 import Favorites from '../favorites/Favorites';
 
 const App = () => {
-  const dispatch = useDispatch();
-
   return (
     <BrowserRouter>
       <Header />
