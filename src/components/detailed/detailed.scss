@@ -22,7 +22,9 @@
 
 
   img {
-    @include center_block;
+    display: block;
+    height: auto;
+    margin: 0 auto;
   }
 
 

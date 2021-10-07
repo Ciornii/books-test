@@ -4,13 +4,19 @@ import { Link, useHistory } from 'react-router-dom';
 import { getBooks } from '../actions/books';
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
+import { setTerm } from '../../reducers/termReducer';
 
 const Header = () => {
   const dispatch = useDispatch();
   const [searchValue, setSearchValue] = useState('');
 
+  const history = useHistory();
+
   function searchHandler() {
-    dispatch(getBooks(searchValue));
+    dispatch(setTerm(searchValue));
+    const urlEncodedTerm = encodeURI(searchValue);
+    history.push(`/search-results?${urlEncodedTerm}`);
+    setSearchValue('');
   }
 
   return (

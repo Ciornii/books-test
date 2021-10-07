@@ -7,6 +7,7 @@ import Detailed from '../detailed/Detailed';
 import Error from '../error/Error';
 import Header from '../header/Header';
 import Favorites from '../favorites/Favorites';
+import SearchResults from '../searchResults/SearchResults';
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
           <Route exact path='/' component={Main} />
           <Route path='/detailed/:id' component={Detailed} />
           <Route path='/favorites' component={Favorites} />
+          <Route path='/search-results' component={SearchResults} />
           <Route path='/error' component={Error} />
           <Redirect to='/' />
         </Switch>
