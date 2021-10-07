@@ -25,7 +25,7 @@ const Header = () => {
               value={searchValue}
               onChange={e => setSearchValue(e.target.value)}
               type='text'
-              placeholder='Input repo name'
+              placeholder='Input book name'
             />
             <button onClick={() => searchHandler()}>Search</button>
           </div>
