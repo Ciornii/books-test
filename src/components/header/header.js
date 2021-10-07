@@ -18,7 +18,7 @@ const Header = () => {
       <div className='container'>
         <div className='header__inner'>
           <Link className='header__logo' to='/'>
-            <img src='./assets/img/logo/logo-white.png' alt='logo' />
+            Home
           </Link>
           <div className='header__search'>
             <input
@@ -30,7 +30,7 @@ const Header = () => {
             <button onClick={() => searchHandler()}>Search</button>
           </div>
           <NavLink className='header__favorites' to={`/favorites`}>
-            favorites
+            Favorites
           </NavLink>
         </div>
       </div>
