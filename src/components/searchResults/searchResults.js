@@ -25,7 +25,7 @@ const SearchResults = () => {
       {isFetching === false ? (
         <div className='books-wrapper'>
           {books.map(book => (
-            <Book book={book} />
+            <Book book={book} key={book.id} />
           ))}
         </div>
       ) : (

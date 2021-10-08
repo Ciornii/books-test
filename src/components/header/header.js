@@ -24,7 +24,7 @@ const Header = () => {
       <div className='container'>
         <div className='header__inner'>
           <Link className='header__logo' to='/' title='home'>
-            <i class='fas fa-book-open'></i>Books App
+            <i className='fas fa-book-open'></i>Books App
           </Link>
           <div className='header__search'>
             <input
@@ -34,11 +34,11 @@ const Header = () => {
               placeholder='Input book name'
             />
             <button onClick={() => searchHandler()}>
-              <i class='fas fa-search'></i>
+              <i className='fas fa-search'></i>
             </button>
           </div>
           <NavLink className='header__favorites' to={`/favorites`} title='favorites'>
-            <i class='fas fa-star'></i>
+            <i className='fas fa-star'></i>
             <div className='header__counter'>{favorites.length}</div>
           </NavLink>
         </div>
