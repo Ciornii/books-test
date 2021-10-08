@@ -15,6 +15,7 @@ const Book = props => {
           alt={book?.volumeInfo?.title}
           width='128'
           height='169'
+          loading='lazy'
         />
       </div>
       <div className='book__subtitle'>{book?.volumeInfo?.subtitle}</div>

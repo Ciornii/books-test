@@ -24,7 +24,7 @@ const Header = () => {
       <div className='container'>
         <div className='header__inner'>
           <Link className='header__logo' to='/' title='home'>
-            Home
+            <i class='fas fa-book-open'></i>Books App
           </Link>
           <div className='header__search'>
             <input
