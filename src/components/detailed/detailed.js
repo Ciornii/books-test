@@ -43,7 +43,10 @@ const Detailed = props => {
             height='440'
           />
           <div className='detailed__subtitle'>{book?.volumeInfo?.subtitle}</div>
-          <div className='detailed__desc'>{book?.volumeInfo?.description}</div>
+          <div
+            className='detailed__desc'
+            dangerouslySetInnerHTML={{ __html: book?.volumeInfo?.description }}
+          />
           <div
             className={`detailed__favorite ${favoriteClass ? 'active' : ''}`}
             onClick={() => favoriteHandler(book)}

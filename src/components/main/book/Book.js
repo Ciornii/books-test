@@ -18,7 +18,10 @@ const Book = props => {
         />
       </div>
       <div className='book__subtitle'>{book?.volumeInfo?.subtitle}</div>
-      <div className='book__desc'>{book?.volumeInfo?.description}</div>
+      <div
+        className='book__desc'
+        dangerouslySetInnerHTML={{ __html: book?.volumeInfo?.description }}
+      />
     </NavLink>
   );
 };
