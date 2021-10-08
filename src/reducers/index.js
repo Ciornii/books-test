@@ -2,6 +2,7 @@ import { combineReducers } from 'redux';
 import { createStore, applyMiddleware } from 'redux';
 import booksReducer from './booksReducer';
 import termReducer from './termReducer';
+import favoritesReducer from './favoritesReducer';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
 import { loadStateFromLocalStorage, saveStateToLocalStorage } from '../localStorage';
@@ -10,6 +11,7 @@ import throttle from 'lodash/throttle';
 const rootReducer = combineReducers({
   books: booksReducer,
   term: termReducer,
+  favorites: favoritesReducer,
 });
 
 const persistedState = loadStateFromLocalStorage();

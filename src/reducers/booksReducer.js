@@ -14,7 +14,6 @@ export default function booksReducer(state = defaultState, action) {
       return {
         ...state,
         items: action.payload.items,
-        totalCount: action.payload.total_count,
         isFetching: false,
       };
     case SET_IS_FETCHING:

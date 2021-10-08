@@ -1,6 +1,7 @@
 import React from 'react';
 import './book.scss';
 import { NavLink } from 'react-router-dom';
+import { getLimitedSymbol } from '../../../utils';
 
 const Book = props => {
   const book = props.book;

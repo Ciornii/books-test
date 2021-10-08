@@ -9,15 +9,15 @@ import { setTerm } from '../../reducers/termReducer';
 const Header = () => {
   const dispatch = useDispatch();
   const [searchValue, setSearchValue] = useState('');
-
+  const favorites = useSelector(state => state.favorites.items);
   const history = useHistory();
 
-  function searchHandler() {
+  const searchHandler = () => {
     dispatch(setTerm(searchValue));
     const urlEncodedTerm = encodeURI(searchValue);
     history.push(`/search-results?${urlEncodedTerm}`);
     setSearchValue('');
-  }
+  };
 
   return (
     <header className='header'>
@@ -36,7 +36,7 @@ const Header = () => {
             <button onClick={() => searchHandler()}>Search</button>
           </div>
           <NavLink className='header__favorites' to={`/favorites`}>
-            Favorites
+            Favorites: {favorites.length}
           </NavLink>
         </div>
       </div>
