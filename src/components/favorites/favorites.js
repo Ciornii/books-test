@@ -19,7 +19,7 @@ const Favorites = props => {
       )}
 
       <button onClick={() => props.history.goBack()} className='back-btn'>
-        BACK
+        <i class='fas fa-arrow-alt-circle-left'></i>
       </button>
 
       {isFetching === false ? (

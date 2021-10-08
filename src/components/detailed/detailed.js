@@ -25,30 +25,32 @@ const Detailed = props => {
   }, [favorites]);
 
   const favoriteHandler = book => {
-    console.log(favorites);
-
     dispatch(setFavorite(book));
   };
-  console.log(favorites);
 
   return (
     <div>
       <button onClick={() => props.history.goBack()} className='back-btn'>
-        BACK
+        <i class='fas fa-arrow-alt-circle-left'></i>
       </button>
       {book ? (
-        <>
-          <div className='detailed'>
-            <div className='detailed__title'>{book?.volumeInfo?.title}</div>
-            <img src={book?.volumeInfo?.imageLinks?.thumbnail} alt='' />
-            <div className='detailed__subtitle'>{book?.volumeInfo?.subtitle}</div>
-            <div className='detailed__desc'>{book?.volumeInfo?.description}</div>
+        <div className='detailed'>
+          <div className='detailed__title'>{book?.volumeInfo?.title}</div>
+          <img
+            src={book?.volumeInfo?.imageLinks?.small}
+            alt={book?.volumeInfo?.title}
+            width='300'
+            height='440'
+          />
+          <div className='detailed__subtitle'>{book?.volumeInfo?.subtitle}</div>
+          <div className='detailed__desc'>{book?.volumeInfo?.description}</div>
+          <div
+            className={`detailed__favorite ${favoriteClass ? 'active' : ''}`}
+            onClick={() => favoriteHandler(book)}
+          >
+            <i class='fas fa-star'></i>
           </div>
-          <button onClick={() => favoriteHandler(book)} className='favorite'>
-            favorite
-          </button>
-          {favoriteClass && <div>Is favorite</div>}
-        </>
+        </div>
       ) : (
         <div className='fetching'></div>
       )}
