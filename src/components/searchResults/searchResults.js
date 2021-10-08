@@ -22,11 +22,15 @@ const SearchResults = () => {
         </div>
       )}
 
+      <h1>Search Results</h1>
+
       {isFetching === false ? (
         <div className='books-wrapper'>
-          {books.map(book => (
-            <Book book={book} key={book.id} />
-          ))}
+          {books.length > 0 ? (
+            books.map(book => <Book book={book} key={book.id} />)
+          ) : (
+            <p className='no-result'>Nothing found by this keyword.</p>
+          )}
         </div>
       ) : (
         <div className='fetching'></div>
