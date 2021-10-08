@@ -36,12 +36,14 @@ const Detailed = props => {
       {book ? (
         <div className='detailed'>
           <div className='detailed__title'>{book?.volumeInfo?.title}</div>
-          <img
-            src={book.volumeInfo.imageLinks.small || book.volumeInfo.imageLinks.thumbnail}
-            alt={book?.volumeInfo?.title}
-            width='300'
-            height='440'
-          />
+          <div className='detailed__img'>
+            <img
+              src={book.volumeInfo.imageLinks.small || book.volumeInfo.imageLinks.thumbnail}
+              alt={book?.volumeInfo?.title}
+              width='300'
+              height='440'
+            />
+          </div>
           <div className='detailed__subtitle'>{book?.volumeInfo?.subtitle}</div>
           <div
             className='detailed__desc'

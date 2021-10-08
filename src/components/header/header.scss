@@ -9,6 +9,7 @@
   background-color: $dark-grey;
   box-shadow: 0px 2px 5px 0px rgba(131, 131, 131, 0.2);
   min-height: 70px;
+  padding: 1rem 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -27,11 +28,21 @@
     align-items: center;
     align-content: center;
     gap: 10px;
+
+    @media only screen and (max-width: 767px) {
+      gap: 20px;
+    }
   }
 
   &__search {
     position: relative;
     width: 500px;
+    order: 2;
+
+    @media only screen and (max-width: 767px) {
+      order: 3;
+      width: 100%;
+    }
 
     input {
       position: relative;
@@ -79,6 +90,11 @@
     width: 26px;
     cursor: pointer;
     transition: all 0.4s ease;
+    order: 3;
+
+    @media only screen and (max-width: 767px) {
+      order: 2;
+    }
 
     i {
       font-size: 22px;

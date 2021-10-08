@@ -8,6 +8,10 @@
   padding: 5px;
   min-width: 250px;
 
+  @media only screen and (max-width: 1089px) {
+    margin: 0 auto;
+  }
+
   &:hover {
     outline: 1px solid black;
   }
