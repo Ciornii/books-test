@@ -9,7 +9,7 @@ export const getBooks = (searchQuery = 'javascript') => {
     try {
       dispatch(setIsFetching(true));
       const response = await axios.get(
-        `https://www.googleapis.com/books/v1/volumes?q=${searchQuery}&key=AIzaSyCIrsl3w_XRZuHC0tQV37htWZXRm17HSDk&maxResults=30`,
+        `https://www.googleapis.com/books/v1/volumes?q=${searchQuery}&maxResults=30`,
       );
       dispatch(setBooks(response.data));
     } catch (e) {
