@@ -21,12 +21,15 @@ const Favorites = props => {
       <button onClick={() => props.history.goBack()} className='back-btn'>
         <i class='fas fa-arrow-alt-circle-left'></i>
       </button>
+      <h1>Favorites</h1>
 
       {isFetching === false ? (
         <div className='books-wrapper'>
-          {favorites.map(book => (
-            <Book book={book} />
-          ))}
+          {favorites.length > 0 ? (
+            favorites.map(book => <Book book={book} />)
+          ) : (
+            <p className='no-result'>You don't have favorites books</p>
+          )}
         </div>
       ) : (
         <div className='fetching'></div>

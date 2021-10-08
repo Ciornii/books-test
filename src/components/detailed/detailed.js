@@ -37,7 +37,7 @@ const Detailed = props => {
         <div className='detailed'>
           <div className='detailed__title'>{book?.volumeInfo?.title}</div>
           <img
-            src={book?.volumeInfo?.imageLinks?.small}
+            src={book.volumeInfo.imageLinks.small || book.volumeInfo.imageLinks.thumbnail}
             alt={book?.volumeInfo?.title}
             width='300'
             height='440'
@@ -50,6 +50,7 @@ const Detailed = props => {
           <div
             className={`detailed__favorite ${favoriteClass ? 'active' : ''}`}
             onClick={() => favoriteHandler(book)}
+            title='Set favorite'
           >
             <i class='fas fa-star'></i>
           </div>

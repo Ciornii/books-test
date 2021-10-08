@@ -23,7 +23,7 @@ const Header = () => {
     <header className='header'>
       <div className='container'>
         <div className='header__inner'>
-          <Link className='header__logo' to='/'>
+          <Link className='header__logo' to='/' title='home'>
             Home
           </Link>
           <div className='header__search'>
@@ -33,10 +33,13 @@ const Header = () => {
               type='text'
               placeholder='Input book name'
             />
-            <button onClick={() => searchHandler()}>Search</button>
+            <button onClick={() => searchHandler()}>
+              <i class='fas fa-search'></i>
+            </button>
           </div>
-          <NavLink className='header__favorites' to={`/favorites`}>
-            Favorites: {favorites.length}
+          <NavLink className='header__favorites' to={`/favorites`} title='favorites'>
+            <i class='fas fa-star'></i>
+            <div className='header__counter'>{favorites.length}</div>
           </NavLink>
         </div>
       </div>
