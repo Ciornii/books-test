@@ -18,10 +18,12 @@ const Book = props => {
         />
       </div>
       <div className='book__subtitle'>{book?.volumeInfo?.subtitle}</div>
-      <div
-        className='book__desc'
-        dangerouslySetInnerHTML={{ __html: book?.volumeInfo?.description }}
-      />
+      {book.volumeInfo?.description && (
+        <div
+          className='book__desc'
+          dangerouslySetInnerHTML={{ __html: getLimitedSymbol(`${book.volumeInfo?.description}`) }}
+        />
+      )}
     </NavLink>
   );
 };
