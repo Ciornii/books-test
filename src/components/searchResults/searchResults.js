@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { getBooks } from '../actions/books';
 import { useDispatch, useSelector } from 'react-redux';
-import Book from '../main/book/Book';
+import Book from '../main/book/book';
 
 const SearchResults = () => {
   const dispatch = useDispatch();

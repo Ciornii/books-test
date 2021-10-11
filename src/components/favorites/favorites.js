@@ -1,9 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './favorites.scss';
-import { getBooks } from '../actions/books';
-import { useDispatch, useSelector } from 'react-redux';
-import { NavLink } from 'react-router-dom';
-import Book from '../main/book/Book';
+import { useSelector } from 'react-redux';
+import Book from '../main/book/book';
 
 const Favorites = props => {
   const favorites = useSelector(state => state.favorites.items);

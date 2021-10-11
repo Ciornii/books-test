@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './Header.scss';
 import { Link, useHistory } from 'react-router-dom';
-import { getBooks } from '../actions/books';
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { setTerm } from '../../reducers/termReducer';

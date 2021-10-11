@@ -1,13 +1,12 @@
 import React from 'react';
 import './app.scss';
-import { useDispatch, useSelector } from 'react-redux';
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
-import Main from '../main/Main';
-import Detailed from '../detailed/Detailed';
-import Error from '../error/Error';
-import Header from '../header/Header';
-import Favorites from '../favorites/Favorites';
-import SearchResults from '../searchResults/SearchResults';
+import Main from '../main/main';
+import Detailed from '../detailed/detailed';
+import Error from '../error/error';
+import Header from '../header/header';
+import Favorites from '../favorites/favorites';
+import SearchResults from '../searchResults/searchResults';
 
 const App = () => {
   return (

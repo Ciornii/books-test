@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import './main.scss';
 import { getBooks } from '../actions/books';
 import { useDispatch, useSelector } from 'react-redux';
-import Book from './book/Book';
+import Book from './book/book';
 
 const Main = () => {
   const dispatch = useDispatch();
