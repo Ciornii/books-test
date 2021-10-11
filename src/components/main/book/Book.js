@@ -23,7 +23,9 @@ const Book = props => {
             />
           )}
         </div>
-        <div className='book__subtitle'>{getLimitedSymbol(`${book.volumeInfo?.subtitle}`)}</div>
+        {book.volumeInfo?.subtitle && (
+          <div className='book__subtitle'>{getLimitedSymbol(`${book.volumeInfo?.subtitle}`)}</div>
+        )}
         {book.volumeInfo?.description && (
           <div
             className='book__desc'
